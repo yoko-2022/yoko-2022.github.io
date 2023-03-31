@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>srcsetの使い方</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 960px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>srcsetの使い方</h1>
+  <p>srcsetを使うと、画面幅によって表示させるimg要素を切り替えることができる。641px以上のときはpc画像（960px）を表示、640pxになったらsp画像（640px）を表示</p>
+  <div class="visual">
+    <picture><!-- pictureの中はimgタグ一つだけ -->
+      <source media="(min-width:801px)" srcset="img/pc1.jpg 960w" sizes="100vw"> <!-- srcsetは作成した時の大きさ -->
+      <source media="(min-width:641px)" srcset="img/tb1.jpg 800w" sizes="100vw"> <!-- srcsetは作成した時の大きさ -->
+      <img media="(max-width:640px)" srcset="img/sp1.jpg 640w" sizes="100vw" alt="">
+    </picture>
+  </div>
+</body>
+</html>

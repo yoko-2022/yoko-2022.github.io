@@ -1,0 +1,20 @@
+$color-yellow: #F9D26E;
+$color-green: #C5D64B;
+$color-white: #fff;
+$color-brown: #523407;
+$color-blue: #0a0a5c;
+$color-black: #000;
+$color-pink: #f0a6a6;
+
+@mixin btn {
+  display: block;
+  width: 250px;
+  height: 70px;
+  margin: 0 auto;
+  background-color: $color-brown;
+  a {
+    display: block;
+    line-height: 70px;
+    color: $color-white;
+  }
+}

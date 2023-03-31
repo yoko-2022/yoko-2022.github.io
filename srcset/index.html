@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>srcsetをbxsliderで動かす</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      vertical-align: bottom;
+      max-width: 100%;
+    }
+
+    .visual {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>srcsetをbxsliderで動かす</h1>
+  <p>641px以上の時はpc2.jpg(960px)を表示<br>
+     640px以上の時はsp2.jpg(640px)を表示</p>
+  <div class="visual">
+    <div class="bxslider">
+      <picture>
+        <source media="(min-width:641px)" srcset="img/pc2.jpg 960w" sizes="100vw">
+        <img media="(max-width:640px)" srcset="img/sp2.jpg 640w" sizes="100vw" alt="">
+      </picture>
+      <picture>
+        <source media="(min-width:641px)" srcset="img/pc2.jpg 960w" sizes="100vw">
+        <img media="(max-width:640px)" srcset="img/sp2.jpg 640w" sizes="100vw" alt="">
+      </picture>
+    </div>
+  </div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js'></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script>
+    $(function() {
+      $('.bxslider').bxSlider();
+    });
+  </script>
+</body>
+</html>
