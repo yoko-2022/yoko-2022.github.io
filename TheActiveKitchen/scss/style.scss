@@ -7,9 +7,10 @@ $color-brown: #432d0c;
 $color-blue: #0a0a5c;
 $color-black: #000;
 $sp-width: 500px;
-$bsp-width: 767px;
-$pc-width: 960px;
-
+$bsp-width: 1034px;
+* {
+  outline: 1px solid red;
+}
 @mixin btn {
   display: block;
   width: 250px;
@@ -34,12 +35,6 @@ $pc-width: 960px;
 
 @mixin bsp {
   @media (max-width:$bsp-width) {
-    @content;
-  }
-}
-
-@mixin pc {
-  @media (max-width:$pc-width) {
     @content;
   }
 }
@@ -81,7 +76,7 @@ header {
     text-align: center;
     color: $color-white;
     @include bsp {
-      width: 200px;
+      width: 230px;
     }
     @include sp {
       width: 111px;
@@ -163,7 +158,7 @@ header {
   height: 80px;
   margin: 0 auto;
   background: url(../img/cork.jpg);
-  @include pc {
+  @include bsp {
     display: none;
   }
   ul {
@@ -195,18 +190,21 @@ header {
         }
       }
       &:nth-of-type(1)>a::after {
-        content: url("../img/news-icon.svg");
+        content: url("../img/home-icon.svg");
       }
       &:nth-of-type(2)>a::after {
-        content: url("../img/dumbbell-icon.svg");
+        content: url("../img/news-icon.svg");
       }
       &:nth-of-type(3)>a::after {
-        content: url("../img/menu-icon.svg");
+        content: url("../img/dumbbell-icon.svg");
       }
       &:nth-of-type(4)>a::after {
-        content: url("../img/store-icon.svg");
+        content: url("../img/menu-icon.svg");
       }
       &:nth-of-type(5)>a::after {
+        content: url("../img/store-icon.svg");
+      }
+      &:nth-of-type(6)>a::after {
         content: url("../img/mail-icon.svg");
       }
       &:nth-of-type(4){
@@ -225,7 +223,7 @@ header {
   height: 100vh;
   display: none;
   background-color: #432d0cac;
-  @include pc {
+  @include bsp {
     &.show {
       display: block;
     }
@@ -298,7 +296,6 @@ main {
         @include bsp {
           margin-top: 80px;
           height: 100vh;
-          
         }
         img {
           object-fit: cover;
@@ -377,6 +374,7 @@ main {
       background-color: $color-white;
       padding: 100px;
       @include bsp {
+        margin-top: 100px;
         padding: 100px 10px;
       }
       dl {
@@ -479,7 +477,7 @@ main {
           &::before {
             position: absolute;
             top: 45%;
-            left: -20px;
+            left: -17px;
             display: block;
             content: "";
             width: 0;
@@ -493,7 +491,7 @@ main {
           &::after {
             position: absolute;
             top: 45%;
-            left: -17px;
+            left: -14px;
             display: block;
             content: "";
             width: 0;
@@ -715,8 +713,6 @@ footer {
       @include bsp {
         width: 80%;
         margin: 0 auto;
-        margin-left: -10px;
-        
       }
     }
     .copy {
@@ -731,6 +727,7 @@ footer {
 .menu-main {
   max-width: 1080px;
   margin: 90px auto 0;
+  padding: 0 10px;
   .band {
     position: relative;
     p {
@@ -788,6 +785,7 @@ footer {
       width: calc((100% - 20px) / 2);
       @include bsp {
         width: 90%;
+        margin: 0 auto;
       }
       .img {
         width: 100%;
@@ -804,6 +802,7 @@ footer {
   }
 }
 
+/* policy page */
 .policy-main {
   padding: 100px;
   @include bsp {
