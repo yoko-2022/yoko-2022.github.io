@@ -4,7 +4,7 @@ $('#ham-btn').on('click', function() {
   let index = $(this).children('span').text();
   $(this).children('span').text(index === 'もくじ' ? '閉じる' : 'もくじ');
 
-  $('#g-nav-sp').addClass('show');
+  $('#g-nav-sp').toggleClass('show');
 });
 
 //#g-navをクリックしたときの各項目への移動処理
