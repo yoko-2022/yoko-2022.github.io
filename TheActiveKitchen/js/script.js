@@ -1,33 +1,27 @@
-let scrollEnabled = true;
-
+/* hamクリック処理 */
 $('#ham-btn').on('click', function() {
-  scrollEnabled = !scrollEnabled;
   $(this).toggleClass('is-active');
-
   let index = $(this).children('span').text();
-
   $(this).children('span').text(index === 'もくじ' ? '閉じる' : 'もくじ');
 
-  $('#g-nav-sp').toggleClass('show');
-});
-
-$('#g-nav-sp:not(ul)').click(function(e) {
-  //e.stopPropagation(); // イベントの伝播を止める
-  $('#g-nav-sp').toggleClass('show');
-  /* if(scrollEnabled) {
-    $('header, #ham-btn').slideDown(200);
-  } */
+  $('#g-nav-sp').addClass('show');
 });
 
 //#g-navをクリックしたときの各項目への移動処理
 $('#g-nav a, #g-nav-sp a').click(function() {
   let target = $(this).attr('href');
   let position = $(target).offset().top;
-
   $('html,body').animate({scrollTop: position}, 400);
+});
 
+let scrollEnabled = true;
+
+//#g-nav-spをクリックしたときの各項目への移動処理
+$('#g-nav-sp a').click(function() {
+  $('#ham-btn').children('span').text('もくじ');
   $('#g-nav-sp').removeClass('show');
   $('#ham-btn').removeClass('is-active');
+  scrollEnabled = true;
   return false;
 });
 
@@ -54,10 +48,8 @@ $(window).on('scroll', function() {
   }
 });
 
-
 $('#to-top>a').on('click', function () {
   $('html,body').animate({scrollTop: 0}, 200);
-  return false;
 });
 
 $('#news>dl').load('news/news.txt');
@@ -71,8 +63,6 @@ $('#news-btn').on('click', function() {
   $(this).text(txt === 'ニュース記事をもっと見る' ? '閉じる' : 'ニュース記事をもっと見る');
 });
 $('#news-btn').trigger('click'); // 初回クリック
-
-
 
 let fullYear = new Date().getFullYear();
 $('#this-year').text(fullYear === 2023 ? fullYear : `2023-${fullYear}`);
