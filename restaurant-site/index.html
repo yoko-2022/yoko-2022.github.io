@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レストランサイトの制作</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hamburgers.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="touch-icon.png">
+</head>
+<body id="top">
+  <header>
+    <h1><img src="img/logo.svg" alt="リストランテ・フェリカのロゴ"></h1>
+  </header>
+
+  <p class="hamburger hamburger--spin" id="ham-btn">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </p>
+  
+  <nav id="g-nav">
+    <div class="nav-img">
+      <img src="img/g-nav.jpg" alt="お寿司の画像">
+    </div> <!-- /.nav-img -->
+    <ul>
+      <li><a href="#top" data-en="TOP">トップ</a></li>
+      <li><a href="#news" data-en="NEWS">お知らせ</a></li>
+      <li><a href="#video" data-en="VIDEO">動画</a></li>
+      <li><a href="#menu" data-en="MENU">メニュー</a></li>
+      <li><a href="#shop" data-en="SHOP">店舗情報</a></li>
+      <li><a href="#reserve" data-en="RESERVE">ご予約</a></li>
+    </ul>
+    <p class="nav-logo"><img src="img/logo.svg" alt="リストランテ・フェリカのロゴ"></p>
+  </nav>
+
+  <div class="main-visual">
+    <ul class="bxslider">
+      <li><img src="img/slide01.jpg" alt="お寿司のオードブルの画像"></li>
+      <li><img src="img/slide02.jpg" alt="お寿司のオードブルの画像"></li>
+      <li><img src="img/slide03.jpg" alt="お寿司のオードブルの画像"></li>
+    </ul>
+  </div> <!-- /.main-visual -->
+  
+  <main>
+    <div id="news">
+      <h2 data-en="NEWS">お知らせ</h2>
+      <dl id="news-list">
+      </dl> <!-- /#news-list -->
+      
+      <div id="btn">もっと見る</div>
+    </div> <!-- /#news -->
+
+    <div id="video">
+      <h2 data-en="VIDEO">動画</h2>
+      <div class="video-wrapper">
+        <iframe class="ytube" src="https://www.youtube.com/embed/uLgneXrtUXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div> <!-- /.video-wrapper -->
+    </div> <!-- /#video -->
+    
+    <div id="menu">
+      <h2 data-en="MENU">メニュー</h2>
+      <div class="scroll-wrapper">
+        <div class="scroll-box">
+          <a href="img/menu-01.jpg" data-lightbox="photo" data-title="季節の小鉢">
+            <p class="photo">
+              <img src="img/menu-01.jpg" alt="小鉢に入ったおつまみの画像">
+            </p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, asperiores.</p>
+          </a>
+        </div> <!-- /.scroll-box -->
+        <div class="scroll-box">
+          <a href="img/menu-02.jpg" data-lightbox="photo" data-title="季節のにぎり">
+            <p class="photo">
+              <img src="img/menu-02.jpg" alt="にぎり寿司の画像">
+            </p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, asperiores.</p>
+          </a>
+        </div> <!-- /.scroll-box -->
+        <div class="scroll-box">
+          <a href="img/menu-03.jpg" data-lightbox="photo" data-title="えびのちらし寿司">
+            <p class="photo">
+              <img src="img/menu-03.jpg" alt="えびのちらし寿司">
+            </p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, asperiores.</p>
+          </a>
+        </div> <!-- /.scroll-box -->
+        <div class="scroll-box">
+          <a href="img/menu-04.jpg" data-lightbox="photo" data-title="海鮮丼">
+            <p class="photo">
+              <img src="img/menu-04.jpg" alt="海鮮丼の画像">
+            </p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, asperiores.</p>
+          </a>
+        </div> <!-- /.scroll-box -->
+        <div class="scroll-box">
+          <a href="img/menu-05.jpg" data-lightbox="photo" data-title="鮎の天ぷら">
+            <p class="photo">
+              <img src="img/menu-05.jpg" alt="鮎の天ぷら">
+            </p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, asperiores.</p>
+          </a>
+        </div> <!-- /.scroll-box -->
+        <div class="scroll-box">
+          <a href="img/menu-06.jpg" data-lightbox="photo" data-title="獺祭">
+            <p class="photo">
+              <img src="img/menu-06.jpg" alt="獺祭の画像">
+            </p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, asperiores.</p>
+          </a>
+        </div> <!-- /.scroll-box -->
+      </div> <!-- /.scroll-wrapper --> 
+    </div> <!-- /#menu -->
+    
+    <div id="shop">
+      <h2 data-en="SHOP">店舗情報</h2>
+      <div class="shop-wrapper">
+        <div class="sns">
+          <a class="twitter-timeline" data-width="350" data-height="500" data-theme="light" href="https://twitter.com/tocho_koho?ref_src=twsrc%5Etfw">Tweets by tocho_koho</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> <!-- /.sns -->
+        <div class="map">
+          <iframe class="g-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.245147110819!2d139.68971841037268!3d35.689550556178354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd4b71a37a1%3A0xf1665c37f38661e8!2z5p2x5Lqs6YO95bqB!5e0!3m2!1sja!2sjp!4v1675415001224!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> <!-- /.g-map -->
+      </div> <!-- /.shop-wrapper -->
+    </div> <!-- /#shop -->
+    
+    <div id="reserve">
+      <h2 data-en="RESERVE">予約</h2>
+      <div class="form">
+        <iframe class="g-form" height=1312 src="https://docs.google.com/forms/d/e/1FAIpQLSd_akmcphapO1MSfT6W7Zlr1n3RuPcCg1ReZBElYEZqU65sxQ/viewform?usp=sf_link" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>読み込んでいます…</iframe>
+      </div> <!-- /.g-form -->
+    </div> <!-- /#reserve -->
+  </main>
+
+  <footer>
+    <p><small>&copy; Ristorante FELICA <span id="this-year"></span></small></p>
+  </footer>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js' integrity='sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==' crossorigin='anonymous'></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
