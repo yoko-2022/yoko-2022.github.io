@@ -26,6 +26,10 @@
   text-underline-offset: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   position: relative;
   width: 100%;
