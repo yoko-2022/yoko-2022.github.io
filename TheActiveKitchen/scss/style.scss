@@ -45,6 +45,7 @@ header {
   width: 100%;
   height: 200px;
   text-align: center;
+  overflow: hidden;
   @include bsp {
     position: fixed;
     top: 0;
@@ -83,6 +84,7 @@ header {
 }
 
 #ham-btn {
+  overflow: hidden;
   display: none;
   @include bsp {
     position: fixed;
@@ -148,6 +150,7 @@ header {
 }
 
 #g-nav {
+  overflow: hidden;
   position: sticky;
   top: 0;
   left: 0;
@@ -281,6 +284,7 @@ header {
 }
 
 main {
+  overflow: hidden;
   .main-visual {
     height: 100vh;
     ul{

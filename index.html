@@ -1,21 +1,498 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YOKO-2022.GITHUB.IO | トップページ</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="video-wrapper">
-    <video src="img/-22634.mp4" autoplay muted playsinline roop></video>
-  </div>
-  <div class="txt-box">
-    <h1>portfolio</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est nihil incidunt voluptatem libero porro corporis aliquid, id voluptates pariatur animi quas consequatur impedit expedita enim esse cum repellat maxime amet.</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est nihil incidunt voluptatem libero porro corporis aliquid, id voluptates pariatur animi quas consequatur impedit expedita enim esse cum repellat maxime amet.</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est nihil incidunt voluptatem libero porro corporis aliquid, id voluptates pariatur animi quas consequatur impedit expedita enim esse cum repellat maxime amet.</p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio</h1>
+      <div class="header-wrapper">
+        <div class="left"></div>
+        <div class="right-top"></div>
+        <div class="center-bottom"></div>
+        <div class="right-bottom"></div>
+      </div> <!-- /.header-wrapper -->
+      <nav class="g-nav">
+        <ul>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="works-wrapper" id="works">
+        <h2>Works</h2>
+        <div class="site-wrapper">
+          <div class="work">
+            <button data-micromodal-trigger="modal-1" class="modal-open">
+              <img src="img/house-app-mu.jpg" alt="">
+            </button>
+          </div> <!-- /.work -->
+          <div class="work">
+            <button data-micromodal-trigger="modal-2" class="modal-open">
+              <img src="img/" alt="">
+            </button>
+          </div> <!-- /.work -->
+          <div class="work">
+            <button data-micromodal-trigger="modal-3" class="modal-open">
+              <img src="img/sweet-box-mu.jpg" alt="">
+            </button>
+          </div> <!-- /.work -->
+          <div class="work">
+            <button data-micromodal-trigger="modal-4" class="modal-open">
+              <img src="img/coffee-mu.jpg" alt="">
+            </button>
+          </div> <!-- /.work -->
+          <div class="work">
+            <button data-micromodal-trigger="modal-5" class="modal-open">
+              <img src="img/restaurant-mu.jpg" alt="">
+            </button>
+          </div> <!-- /.work -->
+        </div> <!-- /.site-wrapper -->
+
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-1-title"
+            >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-1-title">家計簿アプリ</h4>
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+                <div class="video-wrapper">
+                  <video controls>
+                    <source src="img/Laravel-1.mp4" type="video/mp4">
+                  </video>
+                </div> <!-- /.video-wrapper -->
+              </div>
+              <div class="modal-content" id="modal-1-content">
+                <div class="modal-text">
+                  <dl>
+                    <dt>url</dt>
+                    <dd>dd</dd>
+                    <dt>サイトの目的</dt>
+                    <dd>お届けサービスの認知</dd>
+                    <dt>ターゲット</dt>
+                    <dd>20~30代女性</dd>
+                    <dt>デザインについて</dt>
+                    <dd>柔らかい曲線を多用した可愛いデザインにした</dd>
+                    <dt>コーディングについて</dt>
+                    <dd>
+                      <ul>
+                        <li>スクロールしたときにケーキに掛かっている幕が開くようにした</li>
+                        <li>background-attachmentを使って背景を固定させた</li>
+                        <li>details/summaryタグを使ってアコーディオンパネルを付け、answerクラスを使って最初から一つ目だけ表示させた</li>
+                        <li>phpとGoogleフォームを使ってお問い合わせページをつけた</li>
+                      </ul>
+                    </dd>
+                    <dt>ツール</dt>
+                    <dd>HTML,CSS,jQuery,particles.js,php,Googleフォーム</dd>
+                  </dl>
+                </div>
+                <!-- /.modal-text -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.modal-1 -->
+
+        <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-2-title"
+            >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-2-title">家計簿アプリ</h4>
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all.jpg" alt="">
+                </div>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all-sp.jpg" alt="">
+                </div>
+              </div>
+              <div class="modal-content" id="modal-2-content">
+                <div class="modal-text">
+                  <dl>
+                    <dt>url</dt>
+                    <dd>dd</dd>
+                    <dt>サイトの目的</dt>
+                    <dd>お届けサービスの認知</dd>
+                    <dt>ターゲット</dt>
+                    <dd>20~30代女性</dd>
+                    <dt>デザインについて</dt>
+                    <dd>柔らかい曲線を多用した可愛いデザインにした</dd>
+                    <dt>コーディングについて</dt>
+                    <dd>
+                      <ul>
+                        <li>スクロールしたときにケーキに掛かっている幕が開くようにした</li>
+                        <li>background-attachmentを使って背景を固定させた</li>
+                        <li>details/summaryタグを使ってアコーディオンパネルを付け、answerクラスを使って最初から一つ目だけ表示させた</li>
+                        <li>phpとGoogleフォームを使ってお問い合わせページをつけた</li>
+                      </ul>
+                    </dd>
+                    <dt>ツール</dt>
+                    <dd>HTML,CSS,jQuery,particles.js,php,Googleフォーム</dd>
+                  </dl>
+                </div>
+                <!-- /.modal-text -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.modal-2 -->
+
+        <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-3-title"
+            >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-3-title">Sweet box</h4>
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all.jpg" alt="">
+                </div>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all-sp.jpg" alt="">
+                </div>
+              </div>
+              <div class="modal-content" id="modal-3-content">
+                <div class="modal-text">
+                  <dl>
+                    <dt>url</dt>
+                    <dd>dd</dd>
+                    <dt>サイトの目的</dt>
+                    <dd>お届けサービスの認知</dd>
+                    <dt>ターゲット</dt>
+                    <dd>20~30代女性</dd>
+                    <dt>デザインについて</dt>
+                    <dd>柔らかい曲線を多用した可愛いデザインにしました。</dd>
+                    <dt>コーディングについて</dt>
+                    <dd>
+                      <ul>
+                        <li>スクロールしたときにケーキに掛かっている幕が開くようにしました。</li>
+                        <li>background-attachmentを使って背景を固定させました。</li>
+                        <li>details/summaryタグを使ってアコーディオンパネルを付けました。answerクラスを付けて、最初から一つ目だけ表示させました。 デフォルトで表示される三角マークは-webkit-details-markerを使ってiosでも非表示になるようにしました。 </li>
+                        <li>phpとGoogleフォームを使ってお問い合わせページをつけました。</li>
+                      </ul>
+                    </dd>
+                    <dt>ツール</dt>
+                    <dd>HTML,CSS,jQuery,particles.js,php,Googleフォーム</dd>
+                  </dl>
+                </div>
+                <!-- /.modal-text -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.modal-3 -->
+
+        <div class="modal micromodal-slide" id="modal-4" aria-hidden="true">
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-4-title"
+            >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-4-title">Sweet box</h4>
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all.jpg" alt="">
+                </div>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all-sp.jpg" alt="">
+                </div>
+              </div>
+              <div class="modal-content" id="modal-4-content">
+                <div class="modal-text">
+                  <dl>
+                    <dt>url</dt>
+                    <dd>dd</dd>
+                    <dt>サイトの目的</dt>
+                    <dd>お届けサービスの認知</dd>
+                    <dt>ターゲット</dt>
+                    <dd>20~30代女性</dd>
+                    <dt>デザインについて</dt>
+                    <dd>柔らかい曲線を多用した可愛いデザインにしました。</dd>
+                    <dt>コーディングについて</dt>
+                    <dd>
+                      <ul>
+                        <li>スクロールしたときにケーキに掛かっている幕が開くようにしました。</li>
+                        <li>background-attachmentを使って背景を固定させました。</li>
+                        <li>details/summaryタグを使ってアコーディオンパネルを付けました。answerクラスを付けて、最初から一つ目だけ表示させました。 デフォルトで表示される三角マークは-webkit-details-markerを使ってiosでも非表示になるようにしました。 </li>
+                        <li>phpとGoogleフォームを使ってお問い合わせページをつけました。</li>
+                      </ul>
+                    </dd>
+                    <dt>ツール</dt>
+                    <dd>HTML,CSS,jQuery,particles.js,php,Googleフォーム</dd>
+                  </dl>
+                </div>
+                <!-- /.modal-text -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.modal-4 -->
+
+        <div class="modal micromodal-slide" id="modal-5" aria-hidden="true">
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-5-title"
+            >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-5-title">Sweet box</h4>
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all.jpg" alt="">
+                </div>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all-sp.jpg" alt="">
+                </div>
+              </div>
+              <div class="modal-content" id="modal-5-content">
+                <div class="modal-text">
+                  <dl>
+                    <dt>url</dt>
+                    <dd>dd</dd>
+                    <dt>サイトの目的</dt>
+                    <dd>お届けサービスの認知</dd>
+                    <dt>ターゲット</dt>
+                    <dd>20~30代女性</dd>
+                    <dt>デザインについて</dt>
+                    <dd>柔らかい曲線を多用した可愛いデザインにしました。</dd>
+                    <dt>コーディングについて</dt>
+                    <dd>
+                      <ul>
+                        <li>スクロールしたときにケーキに掛かっている幕が開くようにしました。</li>
+                        <li>background-attachmentを使って背景を固定させました。</li>
+                        <li>details/summaryタグを使ってアコーディオンパネルを付けました。answerクラスを付けて、最初から一つ目だけ表示させました。 デフォルトで表示される三角マークは-webkit-details-markerを使ってiosでも非表示になるようにしました。 </li>
+                        <li>phpとGoogleフォームを使ってお問い合わせページをつけました。</li>
+                      </ul>
+                    </dd>
+                    <dt>ツール</dt>
+                    <dd>HTML,CSS,jQuery,particles.js,php,Googleフォーム</dd>
+                  </dl>
+                </div>
+                <!-- /.modal-text -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.modal-5 -->
+
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+          <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+            <div
+              class="modal-container"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-1-title"
+            >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-1-title">Sweet box</h4>
+                <button
+                  class="modal-close"
+                  aria-label="Close modal"
+                  data-micromodal-close
+                ></button>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all.jpg" alt="">
+                </div>
+                <div class="modal-image">
+                  <img src="img/sweet-box-all-sp.jpg" alt="">
+                </div>
+              </div>
+              <div class="modal-content" id="modal-1-content">
+                <div class="modal-text">
+                  <dl>
+                    <dt>url</dt>
+                    <dd>dd</dd>
+                    <dt>サイトの目的</dt>
+                    <dd>お届けサービスの認知</dd>
+                    <dt>ターゲット</dt>
+                    <dd>20~30代女性</dd>
+                    <dt>デザインについて</dt>
+                    <dd>柔らかい曲線を多用した可愛いデザインにした</dd>
+                    <dt>コーディングについて</dt>
+                    <dd>
+                      <ul>
+                        <li>スクロールしたときにケーキに掛かっている幕が開くようにした</li>
+                        <li>background-attachmentを使って背景を固定させた</li>
+                        <li>details/summaryタグを使ってアコーディオンパネルを付け、answerクラスを使って最初から一つ目だけ表示させた</li>
+                        <li>phpとGoogleフォームを使ってお問い合わせページをつけた</li>
+                      </ul>
+                    </dd>
+                    <dt>ツール</dt>
+                    <dd>HTML,CSS,jQuery,particles.js,php,Googleフォーム</dd>
+                  </dl>
+                </div>
+                <!-- /.modal-text -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.modal-4 -->
+
+        <div class="banner-wrapper">
+          <div><img src="img/umbrella.jpg" alt="京都観光のバナー画像"></div>
+          <div><img src="img/kyoto_tour.jpg" alt="京都観光のバナー画像"></div>
+          <div><img src="img/my-site-pc.svg" alt="オリジナルサイトのバナー画像"></div>
+          <div><img src="img/mysite-sp.jpg" alt="オリジナルサイトのバナー画像"></div>
+          <div><img src="img/usen-sp.jpg" alt="有線放送のバナー画像"></div>
+          <div><img src="img/first-sale.jpg" alt="新春初売りのバナー画像"></div>
+          <div><img src="img/usen-pc.jpg" alt="有線放送のバナー画像"></div>
+          <div><img src="img/four-pc.jpg" alt="アクセサリーショップのバナー画像"></div>
+          <div><img src="img/four-sp.jpg" alt="アクセサリーショップのバナー画像"></div>
+          <div></div>
+          <div></div>
+        </div> <!-- /.banner-wrapper -->
+      </div> <!-- /.works-wrapper -->
+      
+      <div class="skill-wrapper">
+        <div class="title right">
+          <h2>Skill</h2>
+        </div> <!-- /.title -->
+        <div class="skill-inner">
+          <ul>
+            <li>HTML / CSS / Sass
+              <div class="border">
+                <div class="html">
+                  <div></div>
+                </div>
+                <p>SEOについても勉強。正しくタグを使うことが一番大切。Sassが好き。</p>
+              </div> <!-- /.border -->
+            </li>
+            <li>JavaScript / jQuery / React
+              <div class="border">
+                <div class="js">
+                  <div></div>
+                </div>
+                <p>if文、for文。ReactはReact hookを用いたSPAサイトを作成。</p>
+              </div> <!-- /.border -->
+            </li>
+            <li>PHP / Laravel
+              <div class="border">
+                <div class="php">
+                  <div></div>
+                </div>
+                <p>お問い合わせフォーム、LaravelのMVCモデル、データベースとの連携も勉強。</p>
+              </div> <!-- /.border -->
+            </li>
+            <li>Photoshop、Illustlater、Figma 
+              <div class="border">
+                <div class="php">
+                  <div></div>
+                </div>
+                <p>お問い合わせフォーム、LaravelのMVCモデル、データベースとの連携も勉強。</p>
+              </div> <!-- /.border -->
+            </li>
+          </ul>
+        </div> <!-- /.skill-inner -->
+      </div> <!-- /.skill-wrapper -->
+
+      <div class="timeline-wrapper">
+        <h2>Timeline</h2>
+  
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+              <h3>大学入学時パソコン購入</h3>
+              <p>
+                家でインターネットがつながったので感動。スマホも購入（iPhone4S）。ゲームやネットサーフィンのやりすぎで2年で解約。
+              </p>
+            </div> <!-- /.timeline-content -->
+          </div> <!-- /.timeline-item -->
+  
+          <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content right">
+              <h3>ものを作るのが好き</h3>
+              <p>
+                PCを開かない日はない！ブログを解説したり、YouTubeに動画投稿したり、ペンタブを購入して絵を描いたりしている。
+              </p>
+            </div> <!-- /.timeline-content -->
+          </div> <!-- /.timeline-item -->
+  
+          <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+              <h3>The Presentation</h3>
+              <p>
+                2023年5月フェリカテクニカルアカデミー修了。HTML、CSS、jQuery、WordPressなどサイト制作に必要なスキルを学んだ
+              </p>
+            </div> <!-- /.timeline-content -->
+          </div> <!-- /.timeline-item -->
+  
+          <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content right">
+              <h3>1年後</h3>
+              <p>
+                
+              </p>
+            </div> <!-- /.timeline-content -->
+          </div> <!-- /.timeline-item -->
+  
+          <div class="timeline-item">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+              <h3>AIを使って</h3>
+              <p>
+                AIで人と人をつなぐアプリケーションを作りたい。
+              </p>
+            </div> <!-- /.timeline-content -->
+          </div> <!-- /.timeline-item -->
+  
+        </div> <!-- /.timeline -->
+      </div> <!-- /.timeline-wrapper -->
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script>
+      MicroModal.init({
+        disableScroll: true,
+        awaitOpenAnimation: true,
+        awaitCloseAnimation: true,
+      });
+    </script>
+  </body>
 </html>
