@@ -17,7 +17,7 @@ $(window).scroll(function() {
   let point1 = $('#skill').offset().top;
   let point2 = $('#timeline').offset().top;
 
-  if(y > point1) {
+  if(y > point1 - 200) {
     $('#skill>.skill-inner').addClass('show');
   } else {
     $('#skill>.skill-inner').removeClass('show');
