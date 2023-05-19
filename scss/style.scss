@@ -679,7 +679,8 @@ main {
             }
           }
         }
-        &:hover>.page-1 {
+        &:hover>.page-1,
+        &:active>.page-1 {
           box-shadow: 0 0 4px $color-shadow;
           transform: rotateY(-180deg);
           &::after {
