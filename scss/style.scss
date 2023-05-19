@@ -36,6 +36,9 @@ header {
     font-family: $font-en;
     color: $color-txt;
     -webkit-text-stroke: 1px $color-shadow;
+    @include tb {
+      font-size: 30px;
+    }
   }
   .header-wrapper {
     display: flex;
@@ -154,9 +157,6 @@ main {
   margin: 0 auto 250px;
   padding: 0 10px;
   h2 {
-    top: 50%;
-    right: 10%;
-    z-index: 1;
     width: 100%;
     margin-bottom: 200px;
     padding: 100px;
@@ -165,30 +165,37 @@ main {
     text-align: right;
     border-top: 10px dotted $color-yellow;
     border-bottom: 10px dotted $color-yellow;
-    
+    @include tb {
+      font-size: 32px;
+    }
   }
   .works-wrapper {
     margin-bottom: 350px;
+    @include tb {
+      width: 100%;
+    }
     .site-wrapper {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 200px;
       gap: 50px;
+      overflow: hidden;
+      @include tb {
+        justify-content: space-between;
+        gap: 20px;
+      }
       .work {
         width: calc((100% - 100px) / 3);
         height: 300px;
-        background-color: #c0c0c0;
-        overflow: hidden;
         @include tb {
-          width: calc((100% - 50px) / 2);
+          width: calc((100% - 20px) / 2);
         }
         .modal-open {
           width: 100%;
           height: 100%;
-          background-color: #dc494986;
           transition: .5s;
           img {
-            object-fit: cover;
+            object-fit: contain;
             width: 100%;
             height: 100%;
           }
@@ -255,19 +262,22 @@ main {
               height: 100%;
             }
           }
-          .modal-image {
-            border: #222 solid 1px;
-            margin-right: 50px;
-            img {
-              object-fit: cover;
-              width: 100%;
-              height: 100%;
-            }
-            &:nth-of-type(1) {
-              width: 40%;
-            }
-            &:nth-of-type(2) {
-              width: 20%;
+          .modal-img-wrapper {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            .modal-image {
+              img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+              }
+              &:nth-of-type(1) {
+                width: 70%;
+              }
+              &:nth-of-type(2) {
+                width: 30%;
+              }
             }
           }
         }
@@ -283,22 +293,51 @@ main {
               display: flex;
               flex-wrap: wrap;
               justify-content: center;
+              @include tb {
+                display: block;
+              }
               dt {
                 width: 30%;
                 padding: 0 20px;
                 margin-top: 10px;
                 border-bottom: 1px solid $color-yellow;
+                @include tb {
+                  width: 100%;
+                  padding: 0;
+                  border-bottom: none;
+                }
               }
               dd {
                 width: 60%;
                 margin-top: 10px;
                 border-bottom: 1px solid $color-yellow;
+                @include tb {
+                  width: 100%;
+                  margin-bottom: 60px;
+                }
                 ul {
                   li {
                     list-style: circle;
                   }
                 }
               }
+            }
+          }
+          button {
+            display: block;
+            width: 240px;
+            margin: 30px auto;
+            a {
+              display: block;
+              height: 50px;
+              color: $color-white;
+              text-align: center;
+              line-height: 50px;
+              background-color: $color-pink;
+              transition: .2s;
+              &:hover {
+                background-color: $color-yellow;
+              } 
             }
           }
         }
@@ -353,7 +392,8 @@ main {
       justify-content: space-between;
       margin-bottom: 200px;
       @include tb {
-        width: calc((100% - 50px) / 2);
+        gap: 20px;
+        width: 100%;
       }
       .card {
         position: relative;
@@ -362,6 +402,9 @@ main {
         margin-bottom: 30px;
         transform-style: preserve-3d;
         perspective: 1000px;
+        @include tb {
+          width: calc((100% - 40px) / 2);
+        }
         .box {
           position: absolute;
           top: 0;
@@ -423,6 +466,10 @@ main {
       }
     }
     .codepen-wrapper {
+      overflow: hidden;
+      @include tb {
+        width: 100%;
+      }
       .code-box {
         margin-bottom: 100px;
       }
@@ -431,6 +478,9 @@ main {
 
   .skill-wrapper#skill {
     margin: 0 auto 350px;
+    @include tb {
+      width: 100%;
+    }
     .skill-inner {
       display: none;
       transition: 1s;
@@ -548,9 +598,10 @@ main {
   }
   .my-wrapper {
     margin: 0 auto 350px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    overflow: hidden;
+    @include tb {
+      width: 90%;
+    }
     .book {
       position: relative;
       max-width: 250px;
@@ -558,12 +609,16 @@ main {
       margin: 0 auto;
       box-shadow: 0 0 4px $color-shadow;
       text-align: center;
+      @include tb {
+        width: 50%;
+        margin-left: 150px;
+      }
       .page {
         width: 100%;
         height: 100%;
         color: $color-white;
         perspective: 1500px;
-        .page-1 { // Front of first page
+        .page-1 {
           position: absolute;
           top: 0;
           left: 0;
@@ -571,14 +626,14 @@ main {
           width: 100%;
           height: 100%;
           padding-top: 50px;
-          overflow: hidden; // Allows to add padding and margin to rear pseudo element
+          overflow: hidden;
           opacity: 1;
           font-size: 20px;
           color: $color-white;
           background-color: $color-pink;
           transition: all 1s .3s ;
           transform-origin: 0 50%;
-          &::after { // Back of first page
+          &::after {
             content: "";
             position: absolute;
             top: 0;
@@ -594,7 +649,7 @@ main {
             transition: all .3s .5s;
           }
         }
-        .page-2 { // Front of second page
+        .page-2 {
           position: absolute;
           top: 0;
           left: 0;
@@ -615,7 +670,7 @@ main {
         &:hover>.page-1 {
           box-shadow: 0 0 4px $color-shadow;
           transform: rotateY(-180deg);
-          &::after { // Back of first page hover
+          &::after {
             opacity: 1;
           }
         }
@@ -633,9 +688,9 @@ main {
       padding: 0 10px;
       transition: all 0.4s ease;
       @include tb {
+        width: 90%;
         margin: 30px;
         padding: 0px;
-        width: 90%;
       }
       &::before {
         content: "";
