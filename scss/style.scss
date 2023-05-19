@@ -496,6 +496,10 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+            @include tb {
+              display: block;
+              margin-top: 20px;
+            }
             .html,
             .css,
             .sass,
@@ -511,6 +515,10 @@ main {
               margin-right: 50px;
               background: $color-shadow;
               border-radius: 5px;
+              @include tb {
+                width: 80%;
+                margin: 0 auto 30px;
+              }
               div {
                 position: absolute;
                 top: 0;
@@ -527,6 +535,10 @@ main {
               line-height: 2;
               border: $color-pink solid 1px;
               border-radius: 10px;
+              @include tb {
+                width: 80%;
+                margin: 0 auto 50px;
+              }
             }
           }
           .html>div {
