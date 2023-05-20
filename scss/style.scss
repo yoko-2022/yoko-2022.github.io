@@ -651,14 +651,6 @@ main {
           background-color: $color-pink;
           transition: all 1s .3s ;
           transform-origin: 0 50%;
-          &:hover>.page-1,
-          &:active>.page-1 {
-            box-shadow: 0 0 4px $color-shadow;
-            transform: rotateY(-180deg);
-            &::after {
-              opacity: 1;
-            }
-          }
           &::after {
             content: "Yoko.O";
             position: absolute;
@@ -675,6 +667,14 @@ main {
             border: 1px solid $color-shadow;
             transform: rotateY(180deg);
             transition: all .3s .5s;
+          }
+          &:hover,
+          &:active {
+            box-shadow: 0 0 4px $color-shadow;
+            transform: rotateY(-180deg);
+            &::after {
+              opacity: 1;
+            }
           }
         }
         .page-2 {
