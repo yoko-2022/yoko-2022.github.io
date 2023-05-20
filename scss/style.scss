@@ -28,6 +28,9 @@ header {
   width: 100%;
   aspect-ratio: 13 / 8;
   margin: 0 auto 250px;
+  @include tb {
+    margin: 0 auto 50px;
+  }
   h1 {
     position: absolute;
     top: 3%;
@@ -181,14 +184,13 @@ main {
       gap: 50px;
       overflow: hidden;
       @include tb {
-        justify-content: space-between;
-        gap: 20px;
+        display: block;
       }
       .work {
         width: calc((100% - 100px) / 3);
         height: 300px;
         @include tb {
-          width: calc((100% - 20px) / 2);
+          width: 100%;
         }
         .modal-open {
           width: 100%;
@@ -392,8 +394,7 @@ main {
       justify-content: space-between;
       margin-bottom: 200px;
       @include tb {
-        gap: 20px;
-        width: 100%;
+        display: block;
       }
       .card {
         position: relative;
@@ -403,7 +404,7 @@ main {
         transform-style: preserve-3d;
         perspective: 1000px;
         @include tb {
-          width: calc((100% - 40px) / 2);
+          width: 100%;
         }
         .box {
           position: absolute;
