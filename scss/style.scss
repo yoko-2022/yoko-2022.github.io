@@ -49,7 +49,7 @@ header {
     .left {
       width: 61%;
       aspect-ratio: 1 / 1;
-      background: url(../img/rose.jpg) no-repeat 0 60%/cover;
+      background: url(../img/rose.webp) no-repeat 0 60%/cover;
     }
     .right-top {
       position: absolute;
@@ -85,7 +85,7 @@ header {
     &::before {
       position: absolute;
       bottom: 29px;
-      left: 10px;
+      left: 12px;
       display: block;
       content: "";
       width: 47px;
@@ -97,7 +97,7 @@ header {
       transition: .2s;
       position: absolute;
       top: 20px;
-      left: 10px;
+      left: 12px;
       display: block;
       content: "";
       width: 47px;
@@ -170,6 +170,7 @@ main {
     border-bottom: 10px dotted $color-yellow;
     @include tb {
       font-size: 32px;
+      text-align: center;
     }
   }
   .works-wrapper {
@@ -188,7 +189,7 @@ main {
       }
       .work {
         width: calc((100% - 100px) / 3);
-        height: 300px;
+        height: 400px;
         @include tb {
           width: 100%;
         }
@@ -249,6 +250,10 @@ main {
             background-color: $color-rightpink;
             border-radius: 50%;
             border: 0;
+            @include tb {
+              width: 45px;
+              height: 45px;
+            }
           }
           .video-wrapper {
             position: relative;
@@ -467,7 +472,9 @@ main {
       }
     }
     .codepen-wrapper {
-      overflow: hidden;
+      p {
+        text-align: right;
+      }
       @include tb {
         width: 100%;
       }
@@ -617,14 +624,15 @@ main {
     }
     .book {
       position: relative;
-      max-width: 250px;
-      height: 350px;
-      margin: 0 auto;
+      width: 250px;
+      height: 450px;
+      margin-left: 50%;
       box-shadow: 0 0 4px $color-shadow;
       text-align: center;
       @include tb {
         width: 50%;
-        margin-left: 150px;
+        height: auto;
+        margin-right: 50px;
       }
       .page {
         width: 100%;
@@ -647,23 +655,25 @@ main {
           transition: all 1s .3s ;
           transform-origin: 0 50%;
           &::after {
-            content: "";
+            content: "Yoko.O";
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
             width: 100%;
             height: 100%;
-            padding-top: 1.5rem;
+            padding-top: 34px;
             opacity: 0;
             color: $color-txt;
-            background: $color-rightpink url(../img/photo.svg) no-repeat center center/contain;
+            font-size: 20px;
+            background: $color-white url(../img/photo.webp) no-repeat 7px 70%/contain;
+            border: 1px solid $color-shadow;
             transform: rotateY(180deg);
             transition: all .3s .5s;
           }
         }
         .page-2 {
-          position: absolute;
+          position: relative;
           top: 0;
           left: 0;
           width: 100%;
@@ -671,12 +681,27 @@ main {
           padding-top: 1.5rem;
           opacity: 1;
           color: $color-txt;
-          background-color: $color-yellow;
+          background-color: $color-white;
+          border: 1px solid $color-shadow;
           p {
+            margin-bottom: 60px;
+            padding: 10px;
             font-size: 16px;
-            &:nth-of-type(1) {
-              margin-bottom: 20px;
-              font-size: 20px;
+            text-align: left;
+            line-height: 2;
+          }
+          button {
+            width: 200px;
+            background-color: $color-pink;
+            @include tb {
+              width: 90%;
+              margin-bottom: 10px;
+            }
+            a {
+              display: block;
+              padding: 10px 0;
+              font-size: 16px;
+              color: $color-white;
             }
           }
         }
@@ -771,7 +796,7 @@ main {
           h3 {
             padding: 15px;
             background: $color-yellow;
-            color: #fff;
+            color: $color-txt;
             margin: -20px -20px 0 -20px;
             font-weight: 300;
             border-radius: 3px 3px 0 0;
