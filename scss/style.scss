@@ -472,9 +472,6 @@ main {
       }
     }
     .codepen-wrapper {
-      p {
-        text-align: right;
-      }
       @include tb {
         width: 100%;
       }
