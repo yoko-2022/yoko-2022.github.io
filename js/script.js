@@ -3,19 +3,19 @@ $(function() {
     $(this).toggleClass('is-active');
     let index = $(this).children('span').text();
     $(this).children('span').text(index === 'menu' ? 'close' : 'menu');
-  
     $('#g-nav').toggleClass('show');
+  });
+  //#g-nav-spをクリックしたときの各項目への移動処理
+  $('#g-nav a').on('click', function() {
+    $('#ham-btn').children('span').text('menu');
+    $('#g-nav').removeClass('show');
+    $('#ham-btn').removeClass('is-active');
   });
   
   $(window).scroll(function() {
-    let y = $(this).scrollTop();
-    
-    $('#top-btn>a').on('click', function() {
-      $('html,body').animate({scrollTop: 0}, 600);
-      return false;
-    })
-    let point1 = $('#skill').offset().top;
-    let point2 = $('#timeline').offset().top;
+    const y = $(this).scrollTop();
+    const point1 = $('#skill').offset().top;
+    const point2 = $('#timeline').offset().top;
   
     if(y > point1 - 200) {
       $('#skill>.skill-inner').addClass('show');
