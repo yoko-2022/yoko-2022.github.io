@@ -12,6 +12,7 @@ $color-txt: #3a3a3a;
 $color-shadow: #e2e2e2;
 
 $font-en: 'Frank Ruhl Libre', serif;
+$font-ja: sans-serif;
 
 @mixin tb {
   @media (max-width: 767px) {
@@ -21,6 +22,10 @@ $font-en: 'Frank Ruhl Libre', serif;
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 header {
