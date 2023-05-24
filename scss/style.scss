@@ -189,14 +189,14 @@ main {
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 200px;
-      gap: 50px;
+      gap: 10px 50px;
       overflow: hidden;
       @include tb {
         display: block;
       }
       .work {
         width: calc((100% - 100px) / 3);
-        height: 400px;
+        height: 230px;
         @include tb {
           width: 100%;
         }
