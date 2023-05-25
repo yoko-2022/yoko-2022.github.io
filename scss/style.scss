@@ -313,7 +313,7 @@ main {
               dt {
                 width: 30%;
                 padding: 0 20px;
-                margin-top: 10px;
+                margin: 10px 20px 0 0;
                 border-bottom: 1px solid $color-yellow;
                 @include tb {
                   width: 100%;
@@ -322,14 +322,18 @@ main {
                 }
               }
               dd {
-                width: 60%;
+                width: 65%;
                 margin-top: 10px;
                 border-bottom: 1px solid $color-yellow;
+                &.long {
+                  font-size: 14px;
+                }
                 @include tb {
                   width: 100%;
                   margin-bottom: 60px;
                 }
                 ul {
+                  padding-left: 20px;
                   li {
                     list-style: circle;
                   }
